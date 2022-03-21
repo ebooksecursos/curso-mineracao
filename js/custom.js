@@ -81,28 +81,28 @@ $(function() {
         });
     }
 
-    function tokan_graph () {
-        var scrollDistance = $(window).scrollTop();
-        var scrollDistance1 = $('#tokensale-part').offset().top - 100;
-		console.log(scrollDistance+'--'+scrollDistance1)
-        if ( scrollDistance >= (scrollDistance1 - 100)) {
-            $('.donut').listtopie({
-              startAngle:270,
-              strokeWidth:5,
-                hoverEvent:true,
-                hoverBorderColor:'#6239d7',
-                hoverAnimate:false,
-                drawType:'round',
-                speedDraw:150,
-                hoverColor:'#ffffff',
-                textColor:'#3d1f94',
-                strokeColor:'#3d1f94',
-                textSize:'18',
-                hoverAnimate:true,
-                marginCenter:85,
-            });
-        }
-    }
+    // function tokan_graph () {
+    //     var scrollDistance = $(window).scrollTop();
+    //     var scrollDistance1 = $('#tokensale-part').offset().top - 100;
+	// 	console.log(scrollDistance+'--'+scrollDistance1)
+    //     if ( scrollDistance >= (scrollDistance1 - 100)) {
+    //         $('.donut').listtopie({
+    //           startAngle:270,
+    //           strokeWidth:5,
+    //             hoverEvent:true,
+    //             hoverBorderColor:'#6239d7',
+    //             hoverAnimate:false,
+    //             drawType:'round',
+    //             speedDraw:150,
+    //             hoverColor:'#ffffff',
+    //             textColor:'#3d1f94',
+    //             strokeColor:'#3d1f94',
+    //             textSize:'18',
+    //             hoverAnimate:true,
+    //             marginCenter:85,
+    //         });
+    //     }
+    // }
 
     /* menu overlay start */
     $(".navbar-toggle").on("click", function() {
@@ -169,10 +169,10 @@ $(function() {
 $(window).on("load", function() {
   "use strict";
     /* -------- preloader ------- */
-    $('#preloader').delay(2000).fadeOut(500);
+    // $('#preloader').delay(2000).fadeOut(500);
     /*------End----------*/
 
-  $(".token-graph").addClass("token-graph-right");
+//   $(".token-graph").addClass("token-graph-right");
 
   w = $( window ).width();
   

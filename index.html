@@ -353,17 +353,6 @@
 			$('.modal-saida').click(function(){
 				close();
 			});
-		    $(window).on('scroll', function(){
-				var scrollDistance = $(window).scrollTop() +96;
-			
-				// Assign active class to nav links while scolling
-				$('.menu-section').each(function(i) {
-					if ($(this).position().top <= scrollDistance) {
-						$('.navbar-nav a.page-scroll.active').removeClass('active');
-						$('.navbar-nav a.page-scroll').eq(i).addClass('active');
-					}
-				});
-			}).scroll();
 
 			function addEvent(obj, evt, fn) {
 				if (obj.addEventListener) {

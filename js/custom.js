@@ -61,13 +61,13 @@ $(function() {
     /*end Roadmap slider*/
 
     /*click to scroll menu*/
-    $('[data-scroll]').on('click', function(event) {
-        event.preventDefault();
-        var $section = $($(this).attr('href'));
-        $('html, body').animate({
-            scrollTop: $section.offset().top - 50
-        }, 1500);
-    });
+    // $('[data-scroll]').on('click', function(event) {
+    //     event.preventDefault();
+    //     var $section = $($(this).attr('href'));
+    //     $('html, body').animate({
+    //         scrollTop: $section.offset().top - 50
+    //     }, 1500);
+    // });
     /*end scroll menu*/
 
     function faq_tab () {
@@ -129,16 +129,16 @@ $(function() {
     });
     /* menu overlay end */
 
-    $(window).on('scroll', function(){
-		/*index : header animation*/
-		if ($(this).scrollTop() > 0) {
-            $("header").addClass("header-fixed");
-        } else {
-            $("header").removeClass("header-fixed");
-        }
-		/*end index : header animation*/
-        // tokan_graph();
-    })
+    // $(window).on('scroll', function(){
+	// 	/*index : header animation*/
+	// 	if ($(this).scrollTop() > 0) {
+    //         $("header").addClass("header-fixed");
+    //     } else {
+    //         $("header").removeClass("header-fixed");
+    //     }
+	// 	/*end index : header animation*/
+    //     // tokan_graph();
+    // })
 
 
 	$( window ).on('resize', function(){

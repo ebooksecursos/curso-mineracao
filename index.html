@@ -138,7 +138,7 @@
 			background: #bb3434;
 			color: #fff !important;
 		}
-		.video-home::before{
+		.video-home-inner::before{
 			content: "";
 			position: absolute;
 			left: 0;
@@ -226,7 +226,9 @@
 								<div class="col-12">
 									<div class="video-home">
 										<div class="front-bg fadeInRight">
-											<div id="player"></div>
+											<div class="video-home-inner"></div>
+												<div id="player"></div>
+											</div>
 											<p>Por favor, verifique o seu som está ligado!​</p>
 											<div class="row">
 												<!-- <div class="col-5">
@@ -401,9 +403,9 @@
 				height: '360',
 				width: '640',
 				videoId: 'Zkt655iK5Q0',
-				playerVars: { 'autoplay': 1, 'controls': 0, 'showinfo': 0, 'rel': 0, 'modestbranding': 0 },
+				playerVars: { 'start': 1000,'autoplay': 1, 'controls': 0, 'showinfo': 0, 'rel': 0, 'modestbranding': 0 },
 				events: {
-				  'onReady': onPlayerReady,
+				  'onReady': onPlayerReady
 				}
 			  });
 			}
@@ -412,12 +414,24 @@
 			function onPlayerReady(event) {
 			  event.target.playVideo();
 			}
+			GetFinalyvideo();
+			function GetFinalyvideo() {
+				setTimeout(function(){
+					const duration = player.getDuration();
+					const currenTime = player.getCurrentTime();
+					if(duration - 30 > currenTime){
+						GetFinalyvideo();
+					}else{
+						$('.new-btn').css({'display':'table'});
+					}
+				}, 2000);
+			}
 	  
 			// 5. The API calls this function when the player's state changes.
 			//    The function indicates that when playing a video (state=1),
 			//    the player should play for six seconds and then stop.
 			
-			$('.video-home').click(function(){
+			$('.video-home-inner').click(function(){
 				if(player.getPlayerState() != 1){
 					player.playVideo();
 				}else{
